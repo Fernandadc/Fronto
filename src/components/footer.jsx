@@ -7,14 +7,14 @@ import loc from "../assets/localization";
 function Footer() {
   return (
      <footer>
-    <div class="footer-content">
-      <a href="#" class="logo">Fronto</a>
+    <div className="footer-content">
+      <a href="#" className="logo">Fronto</a>
       <p>Desenvolvimento Frontend de Alta Performance.</p>
-      <div class="social-icons">
+      <div className="social-icons">
         <a href="#"><i data-feather="linkedin"></i></a>
         <a href="#"><i data-feather="github"></i></a>
       </div>
-      <p class="copyright">© 2024 Fronto. Todos os direitos reservados.</p>
+      <p className="copyright">© 2024 Fronto. Todos os direitos reservados.</p>
     </div>
   </footer>
   );

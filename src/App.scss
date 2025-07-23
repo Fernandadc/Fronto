@@ -55,6 +55,68 @@ header {
       }
     }
   }
+
+  /* === Novos estilos responsivos === */
+  .mobile-menu-toggle {
+    display: none;
+    /* Sempre escondido no desktop */
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 25px;
+    /* Reduz padding no mobile */
+
+    .mobile-menu-toggle {
+      display: block;
+      /* Mostra ícone hamburguer */
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .content-menu {
+      min-width: auto;
+      flex-direction: column;
+      align-items: flex-start;
+
+      >li:first-child {
+        width: 100%;
+        /* Logo ocupa linha inteira */
+      }
+
+      nav.nav-menu {
+        display: none;
+        /* Esconde menu inicialmente */
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+
+        .nav-li {
+          margin: 10px 0 !important;
+          /* Sobrescreve margin-right */
+          width: 100%;
+        }
+      }
+
+      &.menu-open nav.nav-menu {
+        display: flex;
+        /* Mostra menu quando aberto */
+      }
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    /* Ajustes opcionais para tablet */
+    padding: 20px 30px;
+
+    .content-menu nav.nav-menu .nav-li {
+      margin-right: 25px;
+      /* Reduz espaçamento */
+    }
+  }
 }
 
 a:-webkit-any-link {
@@ -95,6 +157,9 @@ a:-webkit-any-link {
   --cardBorder: #E2E8F0;
   --button: #2D5BFF;
   --contrast: #F7FAFC;
+  --hero-font: clamp(34px, 6vw, 3.5rem);
+  --standart-font: clamp(18px, 4vw, 32px);
+  --small-font: clamp(14px, 3vw, 1.2rem);
 }
 
 // Homepage
@@ -104,6 +169,21 @@ a:-webkit-any-link {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .home-img-main,
+  .home-img-mid,
+  .home-img-end {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
 
   .home-main-box {
     display: flex;
@@ -123,19 +203,19 @@ a:-webkit-any-link {
       top: 60px;
       position: absolute;
       text-align: left;
-      font-size: 1.8rem;
       font-weight: 700;
       z-index: 1;
       border: none;
 
-      h1 {
+      .hero-title {
+        font-size: var(--hero-font);
         margin: 0 0 24px 0;
         color: var(--dark);
 
       }
 
       p {
-        font-size: 1.2rem;
+        font-size: var(--small-font);
         color: var(--gray);
         line-height: 1.6;
         margin-bottom: 32px;
@@ -154,11 +234,7 @@ a:-webkit-any-link {
     }
 
     .home-btn-main {
-
-      /* CSS */
       .button-56 {
-        left: 950px;
-        top: 500px;
         align-items: center;
         background-color: #42bdff;
         border: 2px solid #111;
@@ -175,66 +251,33 @@ a:-webkit-any-link {
         line-height: 24px;
         max-width: 100%;
         padding: 0 25px;
-        position: relative;
         text-align: center;
         text-decoration: none;
         user-select: none;
         -webkit-user-select: none;
         touch-action: manipulation;
-      }
+        margin-top: 30px;
+        position: relative;
 
-      .button-56:after {
-        background-color: #111;
-        border-radius: 8px;
-        content: "";
-        display: block;
-        height: 48px;
-        left: 0;
-        width: 100%;
-        position: absolute;
-        top: -2px;
-        transform: translate(8px, 8px);
-        transition: transform .2s ease-out;
-        z-index: -1;
-      }
+        &:after {
+          background-color: #111;
+          border-radius: 8px;
+          content: "";
+          display: block;
+          height: 48px;
+          left: 0;
+          width: 100%;
+          position: absolute;
+          top: -2px;
+          transform: translate(8px, 8px);
+          transition: transform .2s ease-out;
+          z-index: -1;
+        }
 
-      .button-56:hover:after {
-        transform: translate(0, 0);
-      }
-
-      .button-56:active {
-        background-color: #ffdeda;
-        outline: 0;
-      }
-
-      .button-56:hover {
-        outline: 0;
-      }
-
-      @media (min-width: 768px) {
-        .button-56 {
-          padding: 0 40px;
+        &:hover:after {
+          transform: translate(0, 0);
         }
       }
-
-      // position: absolute;
-      // left: 950px;
-      // top: auto;
-      // bottom: 70px;
-      // font-size: 1.1rem;
-      // border: 2px solid var(--button);
-      // padding: 12px 32px;
-      // border-radius: 8px;
-      // background-color: var(--button);
-      // color: white;
-      // font-weight: 500;
-      // transition: all 0.3s ease;
-      // text-decoration: none;
-
-      // &:hover {
-      //   transform: translateY(-3px);
-      //   box-shadow: 0 4px 12px rgba(45, 91, 255, 0.2);
-      // }
     }
   }
 
@@ -398,6 +441,106 @@ a:-webkit-any-link {
       &:hover {
         transform: translateY(-3px);
         box-shadow: 0 4px 12px rgba(45, 91, 255, 0.2);
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .page-home {
+    .home-main-box {
+      height: auto;
+      min-height: auto;
+      padding: 80px 40px;
+      flex-direction: column;
+
+      .home-text-main {
+        position: static;
+        max-width: 100%;
+        margin-bottom: 40px;
+      }
+
+      .home-img-main {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .home-btn-main .button-56 {
+        left: auto;
+        top: auto;
+        margin-top: 30px;
+      }
+    }
+
+    .home-mid-box,
+    .home-end-box {
+      flex-direction: column;
+      gap: 40px;
+      padding: 80px 40px;
+
+      .home-text-mid,
+      .home-text-end,
+      .home-img-mid,
+      .home-list-end {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    .home-bottom-box {
+      padding: 80px 40px;
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .page-home {
+    padding: 0 15px;
+    margin-top: 60px;
+
+    .home-main-box {
+      display: flex;
+      flex-direction: row;
+      margin-top: 0;
+      padding: 5px;
+
+      .home-text-main {
+        font-size: 1rem;
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .home-mid-box,
+    .home-end-box {
+      padding: 60px 20px;
+
+      h2 {
+        font-size: 1.5rem !important;
+      }
+
+      p {
+        font-size: 1rem !important;
+      }
+    }
+
+    .home-end-box {
+      flex-direction: column-reverse;
+      margin: 20px 0;
+    }
+
+    .home-bottom-box {
+      padding: 60px 20px;
+
+      h1 {
+        font-size: 1.8rem;
       }
     }
   }

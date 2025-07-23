@@ -29,27 +29,27 @@ export const Contact = () => {
 
   return (
     <>
-     <section class="hero-contact">
-    <div class="hero-content">
+     <section className="hero-contact">
+    <div className="hero-content">
       <h1>Vamos construir algo incrível juntos?</h1>
       <p>Entre em contato para discutir seu projeto ou solicitar um orçamento sem compromisso.</p>
     </div>
   </section>
 
   {/* <!-- Formulário + Contatos --> */}
-  <section class="contact-section">
-    <div class="contact-form">
+  <section className="contact-section">
+    <div className="contact-form">
       <h2>Envie uma mensagem</h2>
       <form>
-        <div class="form-group">
+        <div className="form-group">
           <label for="name">Nome</label>
           <input type="text" id="name" required />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label for="email">E-mail</label>
           <input type="email" id="email" required />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label for="project-type">Tipo de Projeto</label>
           <select id="project-type">
             <option value="landing-page">Landing Page</option>
@@ -58,33 +58,33 @@ export const Contact = () => {
             <option value="other">Outro</option>
           </select>
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label for="message">Mensagem</label>
           <textarea id="message" rows="5" required></textarea>
         </div>
-        <div class="form-checkbox">
+        <div className="form-checkbox">
           <input type="checkbox" id="newsletter" />
           <label for="newsletter">Aceito receber novidades e dicas frontend.</label>
         </div>
-        <button type="submit" class="btn-primary">Enviar Mensagem →</button>
+        <button type="submit" className="btn-primary">Enviar Mensagem →</button>
       </form>
     </div>
 
-    <div class="contact-info">
+    <div className="contact-info">
       <h2>Outras formas de contato</h2>
-      <div class="contact-method">
+      <div className="contact-method">
         <i data-feather="phone"></i>
         <a href="https://wa.me/5511999999999" target="_blank">(11) 99999-9999</a>
       </div>
-      <div class="contact-method">
+      <div className="contact-method">
         <i data-feather="mail"></i>
         <a href="mailto:contato@fronto.dev">contato@fronto.dev</a>
       </div>
-      <div class="contact-method">
+      <div className="contact-method">
         <i data-feather="linkedin"></i>
         <a href="https://linkedin.com/company/fronto" target="_blank">LinkedIn</a>
       </div>
-      <div class="contact-method">
+      <div className="contact-method">
         <i data-feather="github"></i>
         <a href="https://github.com/fronto-dev" target="_blank">GitHub</a>
       </div>
@@ -92,13 +92,13 @@ export const Contact = () => {
   </section>
 
   {/* <!-- FAQ --> */}
-  <section class="faq-section">
+  <section className="faq-section">
     <h2>Perguntas Frequentes</h2>
-    <div class="faq-item">
+    <div className="faq-item">
       <h3>❔ Quanto custa um projeto?</h3>
       <p>A partir de R$3.000, variável conforme escopo e complexidade.</p>
     </div>
-    <div class="faq-item">
+    <div className="faq-item">
       <h3>❔ Tem suporte pós-entrega?</h3>
       <p>Sim, oferecemos 30 dias de suporte gratuito após a entrega.</p>
     </div>
