@@ -42,12 +42,12 @@ function Homepage(props) {
     </div>
     <div className="home-list-end">
       <ul>
-        <li><strong>Código semântico</strong> e otimizado para SEO</li>
-        <li><strong>Performance</strong> (90+ no Lighthouse)</li>
-        <li><strong>Design responsivo</strong> para todos os dispositivos</li>
-        <li><strong>Documentação clara</strong> para fácil manutenção</li>
-        <li><strong>Suporte contínuo</strong> pós-entrega</li>
-        <li><strong>Transparência</strong> em todos os processos</li>
+        <li className="small-title"><strong>Código semântico</strong> e otimizado para SEO</li>
+        <li className="small-title"><strong>Performance</strong> (90+ no Lighthouse)</li>
+        <li className="small-title"><strong>Design responsivo</strong> para todos os dispositivos</li>
+        <li className="small-title"><strong>Documentação clara</strong> para fácil manutenção</li>
+        <li className="small-title"><strong>Suporte contínuo</strong> pós-entrega</li>
+        <li className="small-title"><strong>Transparência</strong> em todos os processos</li>
       </ul>
     </div>
   </div>

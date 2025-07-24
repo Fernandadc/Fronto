@@ -148,17 +148,18 @@ a:-webkit-any-link {
 
 // Variáveis alinhadas com seu tema
 :root {
-  --primary: #2D5BFF;
-  --secondary: #00C9B1;
+  --primary-light: #F5F7FA;
+  --primary-dark: #263238;
+  --secondary: #5e65a1;
   --dark: #2D3748;
   --light: #F7FAFC;
   --gray: #718096;
   --light-gray: #E2E8F0;
   --cardBorder: #E2E8F0;
-  --button: #2D5BFF;
-  --contrast: #F7FAFC;
-  --hero-font: clamp(34px, 6vw, 3.5rem);
-  --standart-font: clamp(18px, 4vw, 32px);
+  --button: #00BFA5;
+  --secondary-button: #FF6D00;
+  --hero-font: clamp(25px, 6vw, 3.5rem);
+  --standart-font: clamp(20px, 4vw, 32px);
   --small-font: clamp(14px, 3vw, 1.2rem);
 }
 
@@ -236,7 +237,7 @@ a:-webkit-any-link {
     .home-btn-main {
       .button-56 {
         align-items: center;
-        background-color: #42bdff;
+        background-color: #7e5df6;
         border: 2px solid #111;
         border-radius: 8px;
         box-sizing: border-box;
@@ -500,51 +501,157 @@ a:-webkit-any-link {
 
 @media (max-width: 768px) {
   .page-home {
-    padding: 0 15px;
-    margin-top: 60px;
+    padding-top: 30px;
+    margin-top: 70px;
+    padding: 0;
 
     .home-main-box {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       margin-top: 0;
       padding: 5px;
+      min-width: 100;
+      align-items: center;
+      border-radius: 0;
+      background-color: transparent;
+      margin-bottom: 3rem;
 
       .home-text-main {
-        font-size: 1rem;
+        font-size: var(--hero-font);
+        text-align: center;
+        padding-top: 1rem;
+        margin-bottom: 0;
+        ;
 
         p {
-          font-size: 1rem;
+          font-size: var(--small-font)
+        }
+      }
+
+      .home-btn-main {
+        .button-56 {
+          margin-top: 5px;
+          align-items: center;
+          background-color: #7e5df6;
+          border: 1px solid #111;
+          border-radius: 8px;
+          box-sizing: border-box;
+          color: #111;
+          cursor: pointer;
+          display: flex;
+          font-family: Inter, sans-serif;
+          font-size: var(--standart-font);
+          font-weight: 400;
+          height: 48px;
+          justify-content: center;
+          line-height: 24px;
+          max-width: 100%;
+          padding: 0 25px;
+          text-align: center;
+          text-decoration: none;
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+          position: relative;
+          margin-bottom: 20px;
+
+          &:after {
+            background-color: #111;
+            border-radius: 8px;
+            content: "";
+            display: block;
+            height: 48px;
+            left: 0;
+            width: 100%;
+            position: absolute;
+            top: -1px;
+            transform: translate(8px, 8px);
+            transition: transform .2s ease-out;
+            z-index: -1;
+          }
+
+          &:hover:after {
+            transform: translate(0, 0);
+          }
+        }
+      }
+    }
+
+    .home-img-main {
+      display: none;
+    }
+
+    .home-mid-box {
+      background-color: rgb(213, 76, 255);
+
+      .home-text-mid {
+        h2 {
+          font-size: var(--standart-font);
+        }
+
+        p {
+          font-size: var(--small-font);
+          color: #111;
         }
       }
     }
 
     .home-mid-box,
     .home-end-box {
-      padding: 60px 20px;
-
-      h2 {
-        font-size: 1.5rem !important;
-      }
-
-      p {
-        font-size: 1rem !important;
-      }
+      padding: 30px 20px;
+      text-align: center;
     }
 
     .home-end-box {
-      flex-direction: column-reverse;
-      margin: 20px 0;
+      flex-direction: column;
+     
+      margin:0;
+
+      .home-text-end {
+        display: flex;
+        align-items: center;
+        h2 {
+          font-size: var(--standart-font);
+          margin-bottom: 0;
+        }
+
+        p{
+          display: none;
+        }
+
+        .home-img-end img{
+          display: none;
+        }
+      }
+      .home-list-end{
+          ul{
+            li{
+              font-size: var(--small-font);
+              padding-left: 10px;
+              text-align: center;
+            }
+          }
+        }
     }
 
     .home-bottom-box {
-      padding: 60px 20px;
+      padding: 30px 20px;
 
       h1 {
-        font-size: 1.8rem;
+        font-size: var(--hero-font);
+      }
+      p{
+        font-size: var(--small-font);
+        
       }
     }
   }
+
+
+
+
 }
+
 
 // Services Page
 .services-page {
