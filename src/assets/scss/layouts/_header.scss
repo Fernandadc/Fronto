@@ -4,6 +4,7 @@ header {
   padding: 28px 50px;
   background-color: var(--background);
   top: 0;
+  z-index: 1000;
 
   &.header-contact {
     position: relative;
@@ -53,14 +54,14 @@ header {
       font-size: 24px;
       cursor: pointer;
 
-      background-color: var(--button);
+      background-color: var(--background);
     }
 
     .content-menu {
       min-width: auto;
       flex-direction: column;
       align-items: flex-start;
-      background-color: var(--button);
+      background-color: white;
       z-index: 1000;
       position: absolute;
 
@@ -76,25 +77,25 @@ header {
 
         .nav-li {
           margin: 10px 0 !important;
-          /* Sobrescreve margin-right */
+          
           width: 100%;
         }
       }
 
       &.menu-open nav.nav-menu {
         display: flex;
-        /* Mostra menu quando aberto */
+        
       }
     }
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    /* Ajustes opcionais para tablet */
+   
     padding: 20px 30px;
 
     .content-menu nav.nav-menu .nav-li {
       margin-right: 25px;
-      /* Reduz espaçamento */
+      
     }
   }
 }
