@@ -1,0 +1,18 @@
+@use 'base/vars' as *;
+@use 'components/nav';
+@use 'layouts/footer';
+@use 'layouts/header';
+@use 'pages/homepage';
+@use 'pages/contact';
+@use 'pages/services';
+@use 'pages/about';
+
+body {
+  background: #fff;
+  color: var(--dark);
+  line-height: 1.6;
+  background-color: var(--background);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}

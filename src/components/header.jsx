@@ -8,9 +8,9 @@ function Header({ isContactPage }) {
 
   return (
     <header className={isContactPage ? "header-contact" : ""}>
-      {/* Botão do menu hamburguer (só aparece no mobile) */}
+      
       <div className="mobile-menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-        {isMenuOpen ? '✕' : '☰'} {/* Ícone que muda para X quando aberto */}
+        {isMenuOpen ? '✕' : '☰'} 
       </div>
 
       <ul className={`content-menu noto-sans-font ${isMenuOpen ? 'menu-open' : ''}`}>
