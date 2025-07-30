@@ -14,9 +14,6 @@ function About (){
       <p className="hero-subtitle">Acreditamos que código bem escrito é a base para experiências digitais memoráveis.</p>
       <a href="portfolio.html" className="btn-primary">Conheça nosso portfólio →</a>
     </div>
-    <div className="hero-image">
-      <img src="assets/images/about-hero.svg" alt="Ilustração de desenvolvedoras trabalhando" />
-    </div>
   </section>
 
   {/* <!-- Quem Somos --> */}

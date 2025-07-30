@@ -85,7 +85,7 @@
   }
 }
 
-/* FAQ */
+/* faq */
 .faq-section {
   max-width: 800px;
   margin: 0 auto;
@@ -106,7 +106,7 @@
   margin-bottom: 0.5rem;
 }
 
-/* Responsivo */
+/* Responsive */
 @media (max-width: 768px) {
   .contact-section {
     grid-template-columns: 1fr;
@@ -178,4 +178,70 @@
 
 .contact-method a:hover {
   color: var(--primary);
+}
+
+@media (max-width: 1024px) {
+  .contact-section {
+    padding: 4rem 5%;
+  }
+  
+  .faq-section {
+    padding: 4rem 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-contact {
+    padding: 3rem 5%;
+    margin-top: 4rem;
+  }
+  
+  .hero-contact h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-contact p {
+    font-size: 1rem;
+  }
+  
+  .contact-section {
+    grid-template-columns: 1fr;
+    padding: 3rem 5%;
+    gap: 2rem;
+  }
+  
+  .contact-form h2,
+  .contact-info h2 {
+    font-size: 1.8rem;
+  }
+  
+  .faq-section {
+    padding: 3rem 5%;
+  }
+  
+  .faq-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-contact h1 {
+    font-size: 1.8rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.7rem;
+  }
+  
+  .btn-primary {
+    width: 100%;
+  }
+  
+  .contact-method {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 }

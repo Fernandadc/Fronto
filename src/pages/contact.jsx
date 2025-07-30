@@ -1,9 +1,7 @@
 import React, { useRef } from "react";
 import Footer from "../components/footer";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter, faFontAwesome, faInstagram, faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import emailjs from "@emailjs/browser";
-import Header from "../components/header";
+
 
 
 export const Contact = () => {
@@ -36,7 +34,7 @@ export const Contact = () => {
     </div>
   </section>
 
-  {/* <!-- Formulário + Contatos --> */}
+  {/* forms and contact */}
   <section className="contact-section">
     <div className="contact-form">
       <h2>Envie uma mensagem</h2>
@@ -91,7 +89,7 @@ export const Contact = () => {
     </div>
   </section>
 
-  {/* <!-- FAQ --> */}
+  {/* faq */}
   <section className="faq-section">
     <h2>Perguntas Frequentes</h2>
     <div className="faq-item">
